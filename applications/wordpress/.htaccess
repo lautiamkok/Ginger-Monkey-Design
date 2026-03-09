@@ -1,0 +1,52 @@
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# BEGIN Caching
+
+# Note: If there is a Cache-Control header with the max-age or s-maxage
+# directive in the response, the Expires header is ignored. In other words, if
+# both Expires and max-age are set max-age will take precedence.
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires
+# https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers
+
+# Cache assets in seconds: 31536000 (365 days). Less than a month or beyond one
+# year is not recommended.
+<IfModule mod_headers.c>
+# Disable caching:
+# Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+# Header set Pragma "no-cache"
+# Header set Expires 0
+
+  # Turn off the expires headers to prevent caching:
+  <IfModule mod_expires.c>
+  # ExpiresActive Off
+  </IfModule>
+
+  <filesMatch "\.(ico|pdf|jpg|jpeg|png|gif|svg|mp3|mp4|js|css|woff|woff2|txt)$">
+  # Cached on a public server, e.g. a CDN:
+  # Header set Cache-Control "max-age=31536000, public"
+
+  # Cached on the client’s computer only:
+  Header set Cache-Control "max-age=31536000, private"
+  </filesMatch>
+
+  <filesMatch "\.(x?html?|php)$">
+  Header set Cache-Control "private, must-revalidate"
+  </filesMatch>
+</IfModule>
+
+# END Caching

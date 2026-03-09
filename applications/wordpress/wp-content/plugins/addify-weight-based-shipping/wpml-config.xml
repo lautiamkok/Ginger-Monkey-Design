@@ -1,0 +1,20 @@
+<wpml-config>
+  <custom-types>
+    <custom-type translate="0">addify_wbs</custom-type>
+    <custom-type translate="0">addify_wbs_a_s_c_f_w</custom-type>
+  </custom-types>
+  <custom-fields>
+    <custom-field action="translate">af_wbs_shipping_title</custom-field>
+    <custom-field action="ignore">af_wbs_shipping_cost</custom-field>
+    <custom-field action="ignore">af_wbs_is_taxable</custom-field>
+    <custom-field action="ignore">af_wbs_condition_type</custom-field>
+    <custom-field action="ignore">af_wbs_condition_operator</custom-field>
+    <custom-field action="ignore">af_wbs_condition_value</custom-field>
+    <custom-field action="ignore">af_wbs_weight_price_rule</custom-field>
+    <custom-field action="ignore">af_wbs_product_price_rule</custom-field>
+    <custom-field action="ignore">af_wbs_shipping_class_price_rule</custom-field>
+    <custom-field action="ignore">af_wbs_category_price_rule</custom-field>
+    <custom-field action="ignore">af_wbs_conditions</custom-field>
+    <custom-field action="ignore">af_wbs_shipping_instance_id</custom-field>
+  </custom-fields>
+</wpml-config>

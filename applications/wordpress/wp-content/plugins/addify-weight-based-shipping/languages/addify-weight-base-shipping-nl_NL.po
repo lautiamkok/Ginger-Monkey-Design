@@ -1,0 +1,327 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Addify Weight Base Shipping\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-22 06:19+0000\n"
+"PO-Revision-Date: 2024-05-22 06:52+0000\n"
+"Last-Translator: development plugins\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.9; wp-6.5.3\n"
+"X-Domain: addify-weight-base-shipping"
+
+#: includes/general-functions.php:102
+#: includes/admin/meta-box/adding-meta-box.php:185
+msgid "Add Condition"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:204
+msgid "Add Group"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:262
+msgid "Add new"
+msgstr ""
+
+#: includes/main.php:22
+msgid "Add New Rule"
+msgstr ""
+
+#: includes/main.php:23
+msgid "Add Rule"
+msgstr ""
+
+#. Author of the plugin
+msgid "Addify"
+msgstr ""
+
+#. Name of the plugin
+msgid "Addify Weight Base Shipping"
+msgstr ""
+
+#: addify-weight-base-shipping.php:53
+msgid ""
+"Addify Shipping By Weight plugin is inactive. WooCommerce plugin must "
+"be active in order to activate it."
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:19
+msgid "Additional Conditions"
+msgstr ""
+
+#: includes/general-functions.php:150
+msgid "Cart Based"
+msgstr ""
+
+#: includes/general-functions.php:192
+msgid "City"
+msgstr ""
+
+#: includes/general-functions.php:230
+msgid "Contains Category"
+msgstr ""
+
+#: includes/general-functions.php:226
+msgid "Contains Product"
+msgstr ""
+
+#: includes/general-functions.php:234
+msgid "Contains Shipping class"
+msgstr ""
+
+#: includes/general-functions.php:184
+msgid "Country"
+msgstr ""
+
+#: includes/general-functions.php:169
+msgid "Coupon"
+msgstr ""
+
+#: includes/general-functions.php:1331
+msgid "Delete"
+msgstr ""
+
+#: includes/general-functions.php:1328
+msgid "Edit"
+msgstr ""
+
+#: includes/main.php:24
+msgid "Edit Rule"
+msgstr ""
+
+#: includes/general-functions.php:283
+msgid "Excluded"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:244
+msgid "Amount"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:241
+msgid "Fee Type"
+msgstr ""
+
+#: includes/general-functions.php:210
+msgid "Height"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://woocommerce.com/products/weight-base-shipping/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://woocommerce.com/vendor/addify/"
+msgstr ""
+
+#: includes/general-functions.php:280
+msgid "Included"
+msgstr ""
+
+#: includes/general-functions.php:262
+msgid "is Equal to"
+msgstr ""
+
+#: includes/general-functions.php:268
+msgid "is Greater than"
+msgstr ""
+
+#: includes/general-functions.php:274
+msgid "is Greater than or equals"
+msgstr ""
+
+#: includes/general-functions.php:271
+msgid "is Less than"
+msgstr ""
+
+#: includes/general-functions.php:277
+msgid "is Less than or equals"
+msgstr ""
+
+#: includes/general-functions.php:265
+msgid "is Not equal to"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:51
+msgid "Is Taxable"
+msgstr ""
+
+#: includes/general-functions.php:214
+msgid "Length"
+msgstr ""
+
+#: includes/general-functions.php:1323
+msgid "Lets you charge a fixed rate for shipping."
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:238
+msgid "Max Weight"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:235
+msgid "Min Weight"
+msgstr ""
+
+#: includes/main.php:25
+msgid "New Rule"
+msgstr ""
+
+#: includes/general-functions.php:1318
+#: includes/admin/meta-box/adding-meta-box.php:55
+msgid "No"
+msgstr ""
+
+#: includes/main.php:29
+msgid "No rule found"
+msgstr ""
+
+#: includes/main.php:30
+msgid "No rule found in trash"
+msgstr ""
+
+#: includes/general-functions.php:416 includes/general-functions.php:554
+#: includes/general-functions.php:630 includes/general-functions.php:703
+#: includes/general-functions.php:774 includes/general-functions.php:832
+msgid "Once"
+msgstr ""
+
+#: includes/general-functions.php:420 includes/general-functions.php:558
+#: includes/general-functions.php:634 includes/general-functions.php:707
+#: includes/general-functions.php:778 includes/general-functions.php:836
+msgid "Per "
+msgstr ""
+
+#. Description of the plugin
+msgid "Price products based on measurement entered by customers"
+msgstr ""
+
+#: includes/general-functions.php:203
+msgid "Product Based"
+msgstr ""
+
+#: includes/general-functions.php:238
+msgid "Products Tags"
+msgstr ""
+
+#: includes/general-functions.php:165
+msgid "Quantity"
+msgstr ""
+
+#: includes/general-functions.php:17
+#: includes/admin/meta-box/adding-meta-box.php:87
+msgid "Remove"
+msgstr ""
+
+#: includes/main.php:27
+msgid "Search Rule"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:232
+msgid "Select Specific"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:229
+msgid "Selection Type"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:42
+msgid "Shipping Cost"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:13
+msgid "Shipping Pricing"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:7
+msgid "Shipping Setting"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:35
+msgid "Shipping Title"
+msgstr ""
+
+#: includes/general-functions.php:315 includes/general-functions.php:453
+msgid "Specific Category"
+msgstr ""
+
+#: includes/general-functions.php:200
+msgid "Specific customer"
+msgstr ""
+
+#: includes/general-functions.php:312 includes/general-functions.php:450
+msgid "Specific Product"
+msgstr ""
+
+#: includes/general-functions.php:321 includes/general-functions.php:459
+msgid "Specific shipping Class"
+msgstr ""
+
+#: includes/general-functions.php:318 includes/general-functions.php:456
+msgid "Specific Tag"
+msgstr ""
+
+#: includes/admin/meta-box/adding-meta-box.php:247
+msgid "Additional Fixed Surcharge"
+msgstr ""
+
+#: includes/general-functions.php:188
+msgid "State"
+msgstr ""
+
+#: includes/general-functions.php:218
+msgid "Stock"
+msgstr ""
+
+#: includes/general-functions.php:222
+msgid "Stock Status"
+msgstr ""
+
+#: includes/general-functions.php:153
+msgid "Subtotal"
+msgstr ""
+
+#: includes/general-functions.php:157
+msgid "Subtotal Excl. tax"
+msgstr ""
+
+#: includes/general-functions.php:161
+msgid "Tax"
+msgstr ""
+
+#: includes/general-functions.php:177
+msgid "User Based"
+msgstr ""
+
+#: includes/general-functions.php:196
+msgid "User role"
+msgstr ""
+
+#: includes/main.php:26
+msgid "View Rule"
+msgstr ""
+
+#: includes/general-functions.php:173
+msgid "Weight"
+msgstr ""
+
+#: includes/main.php:20 includes/main.php:21 includes/main.php:32
+#: includes/main.php:33
+msgid "Weight Base Shippping Fee"
+msgstr ""
+
+#: includes/general-functions.php:206
+msgid "Width"
+msgstr ""
+
+#: includes/general-functions.php:1313
+#: includes/admin/meta-box/adding-meta-box.php:58
+msgid "Yes"
+msgstr ""
+
+#: includes/general-functions.php:180
+msgid "Zip code"
+msgstr ""

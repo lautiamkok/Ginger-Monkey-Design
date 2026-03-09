@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url('~/assets/fonts/DMSans-Bold.woff2') format('woff2'),
+        url('~/assets/fonts/DMSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('~/assets/fonts/DMSans-Medium.woff2') format('woff2'),
+        url('~/assets/fonts/DMSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('~/assets/fonts/MyriadPro-Regular.woff2') format('woff2'),
+        url('~/assets/fonts/MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ramillas';
+    src: url('~/assets/fonts/TTRamillas-LightItalic.woff2') format('woff2'),
+        url('~/assets/fonts/TTRamillas-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ramillas';
+    src: url('~/assets/fonts/TTRamillas-Light.woff2') format('woff2'),
+        url('~/assets/fonts/TTRamillas-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
