@@ -43,8 +43,7 @@ export default defineConfig({
 
     // https://tailwindcss.com/docs/font-family
     fontFamily: {
-      'sans-myriad': ['Myriad Pro', 'sans-serif'],
-      'sans-dm': ['DM Sans', 'sans-serif'],
+      'sans': ['DM Sans', 'sans-serif'],
       'serif': ['Ramillas', 'serif'],
     },
 
@@ -66,15 +65,9 @@ export default defineConfig({
     colors: {
       // transparent: 'transparent',
       // current: 'currentColor',
-      'wine-red-regular': '#b20d35',
-      'salmon-pink': '#d49f9b',
-      'milk-light': '#f9f7f6',
-      'milk-regular': '#f3efed',
-      'milk-dark': '#e8dfdf',
-      'gray-regular': '#f2f2f2', 
-      'gray-light': '#f5f5f5', 
-      'gray-dark': '#2d2c2c', 
-      'earth-dark': '#2d2c2c', 
+      'lime-light': '#e8efeb',
+      'gray-dark': '#080808', 
+      'gray-light': '#b3b3b3', 
     },
     width: {
       half: '50%', // usage: w-half

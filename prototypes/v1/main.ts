@@ -172,41 +172,6 @@ AOS.init({
   // anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 })
 
-// Swiper newsticker.
-// https://stackoverflow.com/questions/64853149/how-to-create-a-ticker-mode-slider-with-swiper-js
-// https://getfizzy.co/
-let SwiperTicker = new Swiper('.swiper.newsticker', {
-  spaceBetween: 15,
-  centeredSlides: true,
-
-  // desktop; global
-  // speed: 10000,
-  
-  autoplay: {
-    delay: 1,
-  },
-  loop: true,
-  slidesPerView:'auto',
-  allowTouchMove: false,
-  disableOnInteraction: true,
-
-  // Resposive
-  breakpoints: {
-    "@0.00": {
-      speed: 30000, // desktop; 30000 mobile
-    },
-    "@0.75": {
-      speed: 15000, // desktop; 30000 mobile
-    },
-    "@1.00": {
-      speed: 15000, // desktop; 30000 mobile
-    },
-    "@1.50": {
-      speed: 10000, // desktop; 30000 mobile
-    },
-  },
-})
-
 // Lazy load images.
 const lazy = new Lazy()
 lazy.observe()
@@ -235,57 +200,6 @@ buttonExit.addEventListener('click', event => {
   event.preventDefault()
   event.stopPropagation()
 })
-
-const scrollend = 'onscrollend' in window
-const rotatable = document.querySelector('.is-rotatable')
-if (rotatable) {
-  window.addEventListener('scroll', event => {
-    // console.log('scrolling')
-    if (isInViewport(rotatable)) {
-      rotatable.classList.remove('rotate-paused')
-      rotatable.classList.add('rotate')
-    } else {
-      rotatable.classList.remove('rotate', 'rotate-paused')
-    }
-  })
-
-  // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollend_event
-  // Safari not working
-  window.addEventListener('scrollend', event => {
-    // console.log('scrolling ended')
-    if (isInViewport(rotatable)) {
-      rotatable.classList.add('rotate-paused')
-    } else {
-      rotatable.classList.remove('rotate', 'rotate-paused')
-    }
-  })
-}
-
-// if (scrollend) {
-//   console.log('scrollend event is supported')
-// }
-
-// Fallback for Safari!
-if (!scrollend && rotatable) {
-  // console.log('scrollend event is not supported')
-  // https://developer.chrome.com/blog/scrollend-a-new-javascript-event
-  window.addEventListener('scroll',  event => {
-    // console.log('scrolling')
-    if (isInViewport(rotatable)) {
-      rotatable.classList.remove('rotate-paused')
-      rotatable.classList.add('rotate')
-    }
-    clearTimeout(window.scrollEndTimer)
-    window.scrollEndTimer = setTimeout(scrollended, 100)
-  })
-}
-
-function scrollended () {
-  // console.log('scrolling ended')
-  if (isInViewport(rotatable)) {
-    rotatable.classList.add('rotate-paused')
-  }
-}
 
 // Show button up.
 // const scrollend = 'onscrollend' in window
@@ -317,85 +231,49 @@ if (buttonUp && footer) {
   })
 }
 
-// // Toggle dropdown desktop menu.
-// const toggleDropdownDesktop = document.getElementById('toggle-dropdown-desktop')
-// const dropdownDesktop = document.getElementById('dropdown-desktop')
-// toggleDropdownDesktop.addEventListener('click', event => {
-//   dropdownDesktop.classList.toggle('-translate-y-full')
-//   dropdownDesktop.classList.toggle('translate-y-0')
-//   toggleDropdownDesktop.classList.toggle('!text-blue-regular')
-//   toggleDropdownDesktop.classList.toggle('[&>_span]:!invisible')
-//   event.preventDefault()
-//   event.stopPropagation()
-// })
-
-// window.addEventListener('scroll', () => {
-//   const target = 800
-//   const scrollPosition = window.pageYOffset
-
-//   // If scroll down to [x] px.
-//   if (scrollPosition > target && dropdownDesktop.classList.contains('translate-y-0')) {
-//     dropdownDesktop.classList.toggle('-translate-y-full')
-//     dropdownDesktop.classList.toggle('translate-y-0')
-//     toggleDropdownDesktop.classList.toggle('!text-blue-regular')
-//     toggleDropdownDesktop.classList.toggle('[&>_span]:!invisible')
-//   }
-// })
-
-// // Toggle dropdown mobile menu.
-// const dropdownMobile = document.getElementById('dropdown-mobile')
-// document.querySelectorAll('.toggle-dropdown-mobile').forEach(element => {
-//   element.addEventListener('click', event => {
-//     dropdownMobile.classList.toggle('translate-x-full')
-//     dropdownMobile.classList.toggle('translate-x-0')
-//     event.preventDefault()
-//     event.stopPropagation()
-//   })
-// })
-
 // https://codepen.io/hey-nick/pen/mLpmMV
 // https://taylor.callsen.me/modern-navigation-menus-with-css-position-sticky-and-intersectionobservers/
-const header = document.querySelector('.sticky-header')
-const intersect = document.querySelector('.sticky-intersection')
+// const header = document.querySelector('.sticky-header')
+// const intersect = document.querySelector('.sticky-intersection')
 
-if (header && intersect) {
-  const handler = (entries) => {
-    // console.log(entries)
-    // entries is an array of observed dom nodes
-    // we're only interested in the first one at [0]
-    // because that's our .intersect node.
-    // Here observe whether or not that node is in the viewport
-    if (!entries[0].isIntersecting) {
-      console.log('sticky')
-      header.classList.add('is-sticky')
-    } else {
-      console.log('not sticky')
-      header.classList.remove('is-sticky')
-    }
-  }
+// if (header && intersect) {
+//   const handler = (entries) => {
+//     // console.log(entries)
+//     // entries is an array of observed dom nodes
+//     // we're only interested in the first one at [0]
+//     // because that's our .intersect node.
+//     // Here observe whether or not that node is in the viewport
+//     if (!entries[0].isIntersecting) {
+//       console.log('sticky')
+//       header.classList.add('is-sticky')
+//     } else {
+//       console.log('not sticky')
+//       header.classList.remove('is-sticky')
+//     }
+//   }
 
-  const options = {
-    // root: null, // relative to document viewport 
-    // rootMargin: '-2px', // margin around root. Values are similar to css property. Unitless values not allowed
-    threshold: 1.0 // visible amount of item shown in relation to root
-  }
+//   const options = {
+//     // root: null, // relative to document viewport 
+//     // rootMargin: '-2px', // margin around root. Values are similar to css property. Unitless values not allowed
+//     threshold: 1.0 // visible amount of item shown in relation to root
+//   }
 
-  // create the observer
-  const observer = new window.IntersectionObserver(handler, options)
+//   // create the observer
+//   const observer = new window.IntersectionObserver(handler, options)
   
-  // give the observer some dom nodes to keep an eye on
-  observer.observe(intersect)
-}
+//   // give the observer some dom nodes to keep an eye on
+//   observer.observe(intersect)
+// }
 
 // Play, pause, mute, unmute the videos on age gate.
-document.querySelectorAll('.video-play-pause').forEach(video => {
-  video.addEventListener('click', event => {
-    if (video.paused) {
-      video.play()
-      video.muted = false
-    } else {
-      video.pause()
-      video.muted = true
-    }
-  })
-})
+// document.querySelectorAll('.video-play-pause').forEach(video => {
+//   video.addEventListener('click', event => {
+//     if (video.paused) {
+//       video.play()
+//       video.muted = false
+//     } else {
+//       video.pause()
+//       video.muted = true
+//     }
+//   })
+// })
