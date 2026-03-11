@@ -231,40 +231,6 @@ if (buttonUp && footer) {
   })
 }
 
-// https://codepen.io/hey-nick/pen/mLpmMV
-// https://taylor.callsen.me/modern-navigation-menus-with-css-position-sticky-and-intersectionobservers/
-// const header = document.querySelector('.sticky-header')
-// const intersect = document.querySelector('.sticky-intersection')
-
-// if (header && intersect) {
-//   const handler = (entries) => {
-//     // console.log(entries)
-//     // entries is an array of observed dom nodes
-//     // we're only interested in the first one at [0]
-//     // because that's our .intersect node.
-//     // Here observe whether or not that node is in the viewport
-//     if (!entries[0].isIntersecting) {
-//       console.log('sticky')
-//       header.classList.add('is-sticky')
-//     } else {
-//       console.log('not sticky')
-//       header.classList.remove('is-sticky')
-//     }
-//   }
-
-//   const options = {
-//     // root: null, // relative to document viewport 
-//     // rootMargin: '-2px', // margin around root. Values are similar to css property. Unitless values not allowed
-//     threshold: 1.0 // visible amount of item shown in relation to root
-//   }
-
-//   // create the observer
-//   const observer = new window.IntersectionObserver(handler, options)
-  
-//   // give the observer some dom nodes to keep an eye on
-//   observer.observe(intersect)
-// }
-
 // Play, pause, mute, unmute the videos on age gate.
 // document.querySelectorAll('.video-play-pause').forEach(video => {
 //   video.addEventListener('click', event => {
