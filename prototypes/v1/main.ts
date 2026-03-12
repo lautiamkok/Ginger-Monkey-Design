@@ -19,11 +19,6 @@ import { disablePageScroll, enablePageScroll } from '@fluejs/noscroll'
 import CurrentBreakpoint from '@/components/current-breakpoint.vue'
 import CarouselCentered from '@/components/carousel/centered.vue'
 import CarouselSlide from '@/components/carousel/slide.vue'
-import FormNewsletter from '@/components/form/newsletter.vue'
-import FormAddToCart from '@/components/form/add-to-cart.vue'
-import FormAge from '@/components/form/age.vue'
-import FormSearch from '@/components/form/search.vue'
-import Googlemap from '@/components/googlemap.vue'
 import DisplayToggler from '@/components/display-toggler.vue'
 
 import Lazy from '@/utils/lazy' 
@@ -31,12 +26,6 @@ import Parallax from '@/utils/parallax'
 import isInViewport from '@/utils/is-in-viewport'
 
 // Attach vue apps separately.
-if (document.getElementById('app-age-gate') !== null) {
-  createApp()
-    .component('FormAge', FormAge)
-    .mount('#app-age-gate')
-}
-
 if (document.getElementById('app-display-toggler') !== null) {
   createApp()
     .component('DisplayToggler', DisplayToggler)
@@ -59,95 +48,6 @@ if (document.getElementById('app-carousel-slide') !== null) {
   createApp()
     .component('CarouselSlide', CarouselSlide)
     .mount('#app-carousel-slide')
-}
-
-if (document.getElementById('app-carousel-slide-awards') !== null) {
-  createApp()
-    .component('CarouselSlide', CarouselSlide)
-    .mount('#app-carousel-slide-awards')
-}
-
-if (document.getElementById('app-carousel-slide-cocktails') !== null) {
-  createApp()
-    .component('CarouselSlide', CarouselSlide)
-    .mount('#app-carousel-slide-cocktails')
-}
-
-if (document.getElementById('app-carousel-slide-premixed') !== null) {
-  createApp()
-    .component('CarouselSlide', CarouselSlide)
-    .mount('#app-carousel-slide-premixed')
-}
-
-if (document.getElementById('app-form-newsletter') !== null) {
-  createApp()
-    .component('FormNewsletter', FormNewsletter)
-    .mount('#app-form-newsletter')
-}
-
-if (document.getElementById('app-form-add-to-cart') !== null) {
-  createApp()
-    .component('FormAddToCart', FormAddToCart)
-    .mount('#app-form-add-to-cart')
-}
-
-if (document.getElementById('app-search') !== null) {
-  createApp()
-    .component('FormSearch', FormSearch)
-    .mount('#app-search')
-
-  // Open and exit search form.
-  const elements = document.querySelectorAll('.open-search')
-  const exitSearch = document.getElementById('exit-search')
-  const search = document.getElementById('search')
-  let lock = document.getElementsByTagName('body')[0]
-  elements.forEach(element => {
-    element.addEventListener('click', event => {
-      search.classList.remove('hidden')
-      disablePageScroll(lock)
-      event.preventDefault()
-      event.stopPropagation()
-    })
-  })
-  exitSearch.addEventListener('click', event => {
-    search.classList.add('hidden')
-    enablePageScroll(lock)
-    event.preventDefault()
-    event.stopPropagation()
-  })
-}
-
-if (document.getElementById('app-googlemap') !== null) {
-  createApp()
-    .component('Googlemap', Googlemap)
-    .mount('#app-googlemap')
-
-  // Slide in and out the map sidebar.
-  // https://stackoverflow.com/questions/16989585/css-3-slide-in-from-left-transition
-  // const slidebarWrapper = document.getElementById('sidebar-wrapper')
-  // const openSideBar = document.getElementById('button-open-sidebar')
-  // const closeSideBar = document.getElementById('button-exit-sidebar')
-  // openSideBar.addEventListener('click', event => {
-  //   slidebarWrapper.classList.add('left-0')
-  //   slidebarWrapper.classList.remove('-left-3/12', '<2xl:-left-4/12', '<xl:-left-5/12', '<md:-left-8/12')
-   
-  //   openSideBar.classList.add('!hidden')
-  //   closeSideBar.classList.remove('!hidden')
-    
-  //   event.preventDefault()
-  //   event.stopPropagation()
-  // })
-
-  // closeSideBar.addEventListener('click', event => {
-  //   slidebarWrapper.classList.add('-left-3/12', '<2xl:-left-4/12', '<xl:-left-5/12', '<md:-left-8/12')
-  //   slidebarWrapper.classList.remove('left-0')
-    
-  //   openSideBar.classList.remove('!hidden')
-  //   closeSideBar.classList.add('!hidden')
-    
-  //   event.preventDefault()
-  //   event.stopPropagation()
-  // })
 }
 
 // Start AOS.
