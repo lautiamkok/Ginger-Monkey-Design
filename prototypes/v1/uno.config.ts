@@ -110,7 +110,6 @@ export default defineConfig({
     'opacity-0',
     'opacity-100',
     '[&>_span]:!invisible',
-    '!text-blue-regular',
     'translate-y-0',
     // {
     //   pattern: /bg-(red|green|blue)-(100|200|300)/,
