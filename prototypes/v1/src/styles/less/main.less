@@ -537,7 +537,7 @@ input[type=number] {
   }
 }
 
-.spin:hover  {
+.spin:hover i {
   animation-name: spin;
   animation-duration: 1s;
   animation-iteration-count: 1;
@@ -558,6 +558,29 @@ input[type=number] {
     opacity: 100;
   }
 }
+
+.spin-wait:hover span {
+  animation-name: wait;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes wait {
+  0% {
+    
+  }
+  70% {
+    
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
 
 
 /* Flashing */
@@ -582,6 +605,14 @@ input[type=number] {
     opacity: 1;
   }
 }
+
+// @media (hover: none) and (pointer: coarse) {
+//   .is-mobile {
+//     @apply
+//       px-0
+//     ;
+//   }
+// }
 
 /**
  * ===============================================================

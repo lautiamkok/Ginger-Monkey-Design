@@ -32,7 +32,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         'main': resolve(__dirname, 'index.html'),
-        // 'singles': resolve(__dirname, 'singles/index.html'),
+        'singles': resolve(__dirname, 'singles/index.html'),
         // 'about': resolve(__dirname, 'about/index.html'),
         // '404': resolve(__dirname, '404/index.html'),
         // 'terms': resolve(__dirname, 'terms/index.html'),

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ginger Monkey Design</title>
   </head>
-  <body id="top">
+  <body id="top" class="overflow-x-hidden border-red-500 border-0">
 
     <header 
       class="
@@ -92,10 +92,10 @@
           <li class="border-0 border-blue-500 flex items-center justify-center">
             <a 
               href="#" 
-              class="flex flex-col items-center transition-all ease-in-out duration-300 border-0 border-red-500"
+              class="flex flex-col items-center transition-all ease-in-out duration-300 border-0 border-red-500 spin"
               id="burger-button"
             >
-              <i class="icon-plus text-lg text-black spin"></i>
+              <i class="icon-plus text-lg text-black"></i>
             </a>
           </li>
         </ul>
@@ -108,7 +108,7 @@
     <main class="px-10 <md:px-5">
 
       <!-- container -->
-      <div class="2xl:container mx-auto border-0 border-red-500 <md:overflow-hidden">
+      <div class="2xl:container mx-auto border-0 border-red-500">
 
         <div class="-mx-7 py-10 flex flex-wrap items-center justify-start">
 
@@ -1569,7 +1569,7 @@
     >
 
         <!-- container -->
-        <div class="2xl:container mx-auto flex flex-wrap items-center justify-between <md:flex-col <md:text-center border-0 border-red-500 overflow-hidden">
+        <div class="2xl:container mx-auto flex flex-wrap items-center justify-between <md:flex-col <md:text-center border-0 border-red-500">
 
           <div class="flex flex-col items-start border-0 border-red-500"
             data-aos="fade-right" 
@@ -1584,8 +1584,8 @@
 
           <div class="text-md text-gray-dark"
             data-aos="fade-left" 
-          data-aos-duration="1000"
-          data-aos-delay="500"
+            data-aos-duration="1000"
+            data-aos-delay="500"
           >
             <p>© 2005-2026 Tom Lane, unless otherwise stated</p>
           </div>
@@ -1627,7 +1627,7 @@
         
         <div class="absolute top-0 right-0 left-0 py-5 px-10 <md:px-5">
 
-          <div class="2xl:container mx-auto w-full flex justify-between items-center w-full border-0 border-blue-500 px-2 <2xl:px-5 pointer-coarse:px-0">
+          <div class="2xl:container mx-auto w-full flex justify-between items-center w-full border-0 border-blue-500 is-mobile">
             <div class="w-4/12 flex items-center justify-start border-0 border-red-500 invisible">
               <a href="#" class="border-0 border-blue-500 transition-all ease-in-out duration-300 opacity-100 hover:opacity-60 h-full logo-complete overflow-hidden">
                 <img 
@@ -1653,10 +1653,10 @@
                 <li>
                   <a
                     href="#"
-                    class="flex flex-col items-center transition-all ease-in-out duration-300"
+                    class="flex flex-col items-center transition-all ease-in-out duration-300 spin"
                     id="exit-button"
                   >
-                    <i class="icon-minus text-lg text-white spin"></i>
+                    <i class="icon-minus text-lg text-white"></i>
                   </a>
                 </li>
               </ul>

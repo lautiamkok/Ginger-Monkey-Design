@@ -192,7 +192,8 @@ buttonBurger.addEventListener('click', event => {
   // menuMobile.classList.remove('hidden')
   menuMobile.classList.toggle('-translate-y-full')
   menuMobile.classList.toggle('translate-y-0')
-  disablePageScroll(lock)
+  // disablePageScroll(lock)
+  // document.body.style.overflow = 'hidden';
   event.preventDefault()
   event.stopPropagation()
 })
@@ -200,7 +201,8 @@ buttonExit.addEventListener('click', event => {
   // menuMobile.classList.add('hidden')
   menuMobile.classList.toggle('-translate-y-full')
   menuMobile.classList.toggle('translate-y-0')
-  enablePageScroll(lock)
+  // enablePageScroll(lock)
+  // document.body.style.overflow = 'auto';
   event.preventDefault()
   event.stopPropagation()
 })
