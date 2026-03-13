@@ -14,6 +14,9 @@ import Swiper from 'swiper/bundle'
 // import styles bundle
 import 'swiper/css/bundle'
 
+// https://masonry.desandro.com/
+import Masonry from 'masonry-layout'
+
 import { disablePageScroll, enablePageScroll } from '@fluejs/noscroll'
 
 import CurrentBreakpoint from '@/components/current-breakpoint.vue'
@@ -26,6 +29,16 @@ import Parallax from '@/utils/parallax'
 import isInViewport from '@/utils/is-in-viewport'
 
 // Attach vue apps separately.
+if (document.getElementById('app-masonry') !== null) {
+  // https://masonry.desandro.com/#getting-started
+  const elem = document.querySelector('.grid')
+  const msnry = new Masonry( elem, {
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: 0
+  })
+}
+
 if (document.getElementById('app-display-toggler') !== null) {
   createApp()
     .component('DisplayToggler', DisplayToggler)
