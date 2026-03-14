@@ -14,13 +14,9 @@ import Swiper from 'swiper/bundle'
 // import styles bundle
 import 'swiper/css/bundle'
 
-// https://masonry.desandro.com/
-import Masonry from 'masonry-layout'
-
 import { disablePageScroll, enablePageScroll } from '@fluejs/noscroll'
 
 import CurrentBreakpoint from '@/components/current-breakpoint.vue'
-import CarouselCentered from '@/components/carousel/centered.vue'
 import CarouselSlide from '@/components/carousel/slide.vue'
 import DisplayToggler from '@/components/display-toggler.vue'
 
@@ -28,16 +24,33 @@ import Lazy from '@/utils/lazy'
 import Parallax from '@/utils/parallax'
 import isInViewport from '@/utils/is-in-viewport'
 
-// Attach vue apps separately.
-if (document.getElementById('app-masonry') !== null) {
-  // https://masonry.desandro.com/#getting-started
-  const elem = document.querySelector('.grid')
-  const msnry = new Masonry( elem, {
-    // options
-    itemSelector: '.grid-item',
-    columnWidth: 0
-  })
-}
+// // https://masonry.desandro.com/
+// import Masonry from 'masonry-layout'
+
+// // Attach vue apps separately.
+// if (document.getElementById('app-masonry') !== null) {
+//   // https://masonry.desandro.com/#getting-started
+//   const elem = document.querySelector('.grid')
+//   const msnry = new Masonry( elem, {
+//     // options
+//     itemSelector: '.grid-item',
+//     columnWidth: 0
+//   })
+
+//   const buttons = document.querySelectorAll('.toggle-gallery')
+//   buttons.forEach(button => {
+//     button.addEventListener('click', (event) => {
+
+//       // Get the data from the data attributes.
+//       const data = event.currentTarget.dataset
+//       const initialIndex = data.index
+//       console.log('Clicked:', initialIndex)
+
+//       event.preventDefault()
+//       event.stopPropagation()
+//     })
+//   })
+// }
 
 if (document.getElementById('app-display-toggler') !== null) {
   createApp()
@@ -49,12 +62,6 @@ if (document.getElementById('app-current-breakpoint') !== null) {
   createApp()
     .component('CurrentBreakpoint', CurrentBreakpoint)
     .mount('#app-current-breakpoint')
-}
-
-if (document.getElementById('app-carousel-centered') !== null) {
-  createApp()
-    .component('CarouselCentered', CarouselCentered)
-    .mount('#app-carousel-centered')
 }
 
 if (document.getElementById('app-carousel-slide') !== null) {

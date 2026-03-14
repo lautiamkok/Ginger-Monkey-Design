@@ -103,6 +103,24 @@ video {
   }
 }
 
+@keyframes fadeIn {
+  from { 
+
+    @apply
+      bg-opacity-0
+    ;
+
+  }
+  to { 
+    @apply
+      bg-opacity-80
+    ;
+  }
+}
+.xxx {
+  animation: fadeIn 2s forwards;
+}
+
 // @media (hover: none) and (pointer: coarse) {
 //   .is-mobile {
 //     @apply
@@ -122,22 +140,14 @@ video {
 .swiper {
   @apply 
     w-full
-    h-auto
+    h-full
   ;
 }
 
-.swiper-slide {
-  // XY center.
-  @apply
-    flex
-    items-center
-    justify-center
-  ;
-}
-
+// Custom prev and next icons.
 .swiper-button-prev::after {
   font-family: 'icomoon' !important;
-  content: "\e90a" !important;
+  content: "\e907" !important;
   // font-size: 15em !important;
   // text-transform: none !important;
   // letter-spacing: 0;
@@ -146,6 +156,7 @@ video {
 
   @apply
    !text-4xl
+   text-white
   ;
 }
 
@@ -160,6 +171,7 @@ video {
 
   @apply
    !text-4xl
+   text-white
   ;
 }
 
@@ -167,93 +179,17 @@ video {
   display: none !important;
 }
 
-// .swiper-button-prev {
-//   @apply
-//    !left-10
-//   ;
-// }
-
-// .swiper-button-next {
-//   @apply
-//    !right-10
-//   ;
-// }
-
-.swiper-pagination {
+// Custom pagination fraction.
+.swiper-pagination-fraction {
   @apply
-    // !space-x-3
-    // !-bottom-10
-    border-0
-    border-red-500
-    ;
-}
-
-// .swiper-button-next {
-//   @apply
-//     !relative
-//     !right-auto
-//   ;
-// }
-
-// .swiper-button-prev {
-//   @apply
-//     !relative
-//     !left-auto
-//   ;
-// }
-
-.swiper-pagination-bullet {
-  width: 4px !important;
-  height: 20px !important;
-  border-radius: 0 !important;
-  text-align: center;
-  line-height: 20px;
-  
-  color: #fff;
-  opacity: 1 !important;
-  background: none !important;
-
-  // Fix the letter 1 appears far from the rest of numbers.
-  &:first-of-type {
-    width: 3px !important;
-  }
-
-  @apply
-    !text-xl
-    font-bold
-    text-wine-red-regular
-    dark:text-white
-
-    // border-1
-    // border-red-500
-    ;
-}
-
-.swiper-pagination-bullet-active {
-  // background: #007aff;
-  @apply
-    !text-gray-400
-    ;
-}
-
-// Spacing between the bullets.
-.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 8px !important;
+   !text-gray-400
+  ;
 }
 
 // Fix for using grid-xy in swiper.
 // https://www.w3schools.com/cssref/css3_pr_box-sizing.asp
 .swiper-wrapper {
   box-sizing: border-box !important;
-}
-
-// For newsticker
-.swiper-wrapper{transition-timing-function:linear !important;}
-
-.swiper-slide-active {
-  @apply
-    z-2
-    ;
 }
 
 /*! purgecss end ignore */
